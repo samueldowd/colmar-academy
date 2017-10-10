@@ -3,18 +3,21 @@
   <head>
     <meta charset="UTF-8">
     <title>Colmar Academy</title>
-  <link rel="stylesheet" href="resources/css/styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/styles.css" type="text/css">
   </head>
   <body>
   	<header>
-  		<img src="resources/images/ic-logo.svg" alt="Colmar Academy logo" />
-  		<h1>Colmar Academy</h1>
+      <div id="logo">
+  		  <img src="resources/images/ic-logo.svg" alt="Colmar Academy logo" />
+  		  <h1><span class="bold">Colmar</span>Academy</h1>
+      </div>
   		<nav>
   			<ul>
   				<li>On campus</li>
   				<li>Online</li>
-  				<li>Companies</li>
-  				<li>Sign in</li>
+  				<li>For Companies</li>
+  				<li><a href="#">Sign in</a></li>
   			</ul>
   		</nav>
   	</header>
@@ -23,9 +26,11 @@
   			<img src="resources/images/banner.jpg" alt="students doing work together" />
   		</div>
   		<div class="rightPanel">
-  			<h2>Learn something new everyday</h2>
-  			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-  			<button>Start here</button>
+  			<div id="bannerTextWrapper">
+          <h2>Learn something new everyday</h2>
+    			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+    			<button>Start here</button>
+        </div>
   		</div>
   	</section>
   	<section id="information">
@@ -105,31 +110,34 @@
   	</section>
   	<section id="thesisExhibit">
   		<h2>Thesis Exhibit</h2>
-  		<div class="leftPanel">
-  			<div id="emptyPlayer">
-  			</div>
-  			<h3>Reimagine urban</h3>
-  			<p>"Morbi at risus ipsum. Quisque tempor vitae dui id viverra. Ut finibus mattis mauris sed ullamcorper. Duis efficitur nisl ac orci pretium, vel blandit ex ullamcorper. Vivamus justo urna, viverra sit amet mauris vitae, efficitur tristique dui. Aliquam ut rhoncus lectus."</p>
-  		</div>
-  		<div class="rightPanel">
-  			<div class="thesisTile">
-	  			<img src="resources/images/thesis-fisma.jpg" alt="hand drawing prototype design">
-	  			<div>
-	  				<h3>Fisma: Design and Prototype</h3>
-	  				<p>Designer showcase of new prototype product</p>
-	  			</div>
-  			</div>	
-  			<div class="thesisTile">
-	  			<img src="resources/images/thesis-now-and-then.jpg" alt="new york skyline">
-	  			<div>
-	  				<h3>Now and then</h3>
-	  				<p>Research study about New York</p>
-	  			</div>
-  			</div>	
-  		</div>
+      <div id="thesisBody">
+    		<div class="leftPanel">
+    			<video src="resources/videos/thesis.mp4">
+            Content is not playable in this browser.
+          </video>
+    			<h3>Reimagine urban</h3>
+    			<p>"Morbi at risus ipsum. Quisque tempor vitae dui id viverra. Ut finibus mattis mauris sed ullamcorper. Duis efficitur nisl ac orci pretium, vel blandit ex ullamcorper. Vivamus justo urna, viverra sit amet mauris vitae, efficitur tristique dui. Aliquam ut rhoncus lectus."</p>
+    		</div>
+    		<div class="rightPanel">
+    			<div class="thesisTile">
+  	  			<img src="resources/images/thesis-fisma.jpg" alt="hand drawing prototype design">
+  	  			<div class="tileText">
+  	  				<h3>Fisma: Design and Prototype</h3>
+  	  				<p>Designer showcase of new prototype product</p>
+  	  			</div>
+    			</div>	
+    			<div class="thesisTile">
+  	  			<img src="resources/images/thesis-now-and-then.jpg" alt="new york skyline">
+  	  			<div class="tileText">
+  	  				<h3>Now and then</h3>
+  	  				<p>Research study about New York</p>
+  	  			</div>
+    			</div>	
+    		</div>
+      </div>
   	</section>
   	<footer>
-  		<h5>Copyright Colmar Academy. All rights reserved>
+  		<h5>&copy;Colmar Academy. All rights reserved</h5>
   		<div id="footerLinks">
   			<span><a href="#">Terms</a></span>
   			<span><a href="#">Privacy</a></span>
