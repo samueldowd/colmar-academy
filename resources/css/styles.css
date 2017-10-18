@@ -1,3 +1,7 @@
+body {
+	margin: 0;
+}
+
 html {
 	font-size: 16px;
 	font-family: Lato, Helvetica;
@@ -7,6 +11,18 @@ h2 {
 	font-size: 2.5rem;
 	font-weight: 700;
 }
+
+h3 {
+	font-size: 1.5rem;
+}
+
+.hiddenDesktop {
+	display: none;
+}
+
+/*
+Header Section
+*/
 
 header {
 	display: flex;
@@ -41,11 +57,13 @@ header {
 header nav ul {
 	display: flex;
 	justify-content: space-between;
-	margin-right: 24px;
+	align-items: center;
+	margin: 0 1.5rem;
+	height: 100%;
 }
 
 header nav ul li {
-	margin-left: 16px;
+	margin-left: 1rem;
 	list-style: none;
 }
 
@@ -54,6 +72,9 @@ header nav ul li a {
 	color: black;
 }
 
+/*
+Section Scaffolding
+*/
 
 section {
 	display: flex;
@@ -69,15 +90,15 @@ section {
 	width: 90%;
 }
 
-/*#information img {
-	width: 60%;
-}*/
-
 .rightPanel {
 	padding: 1rem 1.5rem;	
 	width: 40%;
 	border-left: 2px solid #F1F3F3;
 }
+
+/*
+Banner Section
+*/
 
 #banner {
 	background-color: #F1F3F3;
@@ -93,11 +114,6 @@ section {
 	width: 80%;
 }
 
-#banner .rightPanel h3 {
-	font-size: 1.5rem;
- 
-}
-
 #banner .rightPanel button {
 	background-color: #333;
 	border: none;
@@ -109,8 +125,12 @@ section {
 	width: 100%;
 } 
 
+/*
+Tile Styling
+*/
+
 .informationTile,.thesisTile {
-	padding: 16px;
+	padding: 1rem;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -128,7 +148,6 @@ section {
 }
 
 .tileText h3 {
-	font-size: 1.5rem;
 	margin-bottom: .5rem;
 	padding: 0;
 }
@@ -146,6 +165,10 @@ section {
 .informationTile:hover, .thesisTile:hover {
 	background-color: #F1F3F3;
 }
+
+/*
+Courses Section
+*/
 
 #courses {
 	flex-direction: column;
@@ -191,7 +214,7 @@ section {
 }
 
 .coursesTile h3 {
-	margin-left: 16px;
+	margin-left: 1rem;
 	font-size: 1.25rem;
 }
 
@@ -203,8 +226,7 @@ section {
 	justify-content: center;
 }
 
-
-.leftPanel video {
+#thesisBody .leftPanel video {
 	width: 100%
 }
 
@@ -213,6 +235,14 @@ section {
 	justify-content: space-between;
 }
 
+#thesisBody .rightPanel {
+	border: none;
+}
+
+/*
+Footer
+*/
+
 footer {
 	border-top: 2px solid #F1F3F3;
 	display: flex;
@@ -220,9 +250,174 @@ footer {
 	align-items: center;
 	font-size: .75rem;
 	color: #666;
+	padding: 0 1.5rem;
 }
 
 footer div a {
 	text-decoration: none;
 	color: #666;
+}
+
+/*
+Mobile Screens
+*/
+
+@media only screen and (max-width: 480px) {
+
+	/*
+	Page-wide styles
+	*/
+
+	html {
+		color: #555;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	.hiddenPhone {
+		display: none;
+	}
+
+	.hiddenDesktop {
+		display: block;
+	}
+
+	.leftPanel {
+		width: 100%;
+		padding: 0;
+	}
+
+	.rightPanel {
+		width: 100%;
+		padding: 2rem 1rem;
+	}
+
+	section {
+		flex-direction: column;
+	}
+	/*
+	Header
+	*/
+
+	header {
+		display: inline;
+	}
+
+	#logo {
+		display: none;
+	}
+
+	#phone-nav ul {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	#phone-logo {
+		height: 2.5rem;
+	}
+
+	/*
+	Banner section
+	*/
+
+	.leftPanel img {
+		width: 100%;
+	}
+
+	#banner {
+		background-color: #DDD;
+	}
+
+	#banner .rightPanel {
+		padding: 2rem 1rem;
+	}
+
+	#bannerTextWrapper h2 {
+		margin-top: 0;
+		margin-bottom: 2rem;
+	}
+
+	#bannerTextWrapper h2 {
+		margin-bottom: 1.5rem;
+	}
+
+	#banner .rightPanel button {
+		background-color: #888;
+	}
+
+	/*
+	Information Section
+	*/
+
+	#information {
+		background-color: #FFF;
+	}
+
+	.informationTile {
+		flex-direction: column;
+	}
+
+	.informationTile img {
+		width: 100%;
+	}
+
+	#information .rightPanel {
+		padding: 0;
+		border: 0;
+	}
+
+	.tileText {
+		width: 100%;
+		padding: 1rem 4rem;
+	}
+
+	/*
+	Courses Section
+	*/
+
+	#courses {
+		background-color: #FFF;
+		padding: 2rem .5rem;
+		border: 1px solid #F1F1F1;
+	}
+
+	#coursesPanel {
+		flex-direction: column;
+		width: 100%;
+	}
+	.coursesTile {
+		width: 95%;
+		background-color: #DDD;
+		padding-left: 1rem;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		margin-bottom: .5rem; 
+	}
+
+	.coursesTile h3 {
+		margin-left: 0;
+		margin-right: 0;
+		width: 90%;
+	}
+
+	/*
+	Thesis Section
+	*/
+
+	#thesisExhibit {
+		margin-bottom: 2rem;
+	}
+
+	/*
+	Footer
+	*/
+
+	footer {
+		padding: 1rem .5rem;
+		font-size: 1rem;
+	}
+
 }
